@@ -5,7 +5,8 @@ using CoreEscuela.Entidades;
 
 namespace CoreEscuela
 {
-    public class EscuelaEngine
+    
+    public sealed class EscuelaEngine
     {
         public Escuela Escuela { get; set; }
 
@@ -28,6 +29,7 @@ namespace CoreEscuela
 
         private void CargarEvaluaciones()
         {
+            var lista = new List<Evaluación>();
             foreach (var curso in Escuela.Cursos)
             {
                 foreach (var asignatura in curso.Asignaturas)
@@ -37,15 +39,14 @@ namespace CoreEscuela
                         var rnd = new Random(System.Environment.TickCount);
                         for (int i = 0; i < 5; i++)
                         {
-                            var ev = new Evaluaciones
+                            var ev = new Evaluación
                             {
                                 Asignatura = asignatura,
-                                Nombre = $"{asignatura.Nombre} Evaluacion# {i + 1}",
+                                Nombre = $"{asignatura.Nombre} Evaluacion #{i + 1} ",
                                 Nota = (float)(5 * rnd.NextDouble()),
-                                Alumno = alumno
-     
+                                Alumno = alumno 
                             };
-                           alumno.Evaluacion.Add(ev);
+                            alumno.Evaluaciones.Add(ev);
                         }
                     }
                 }

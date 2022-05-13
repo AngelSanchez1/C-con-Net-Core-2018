@@ -18,8 +18,7 @@ namespace CoreEscuela
             
             ImprimirCursosEscuela(engine.Escuela);
 
-
-
+            
         }
 
 
