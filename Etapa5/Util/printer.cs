@@ -6,13 +6,16 @@ namespace CoreEscuela.util
 {
     public static class Printer
     {
+        //constructor que realiza una linea iniciando su tamaño en una longitud de 10
         public static void DibujarLinea(int tam = 10)
         {
             Console.WriteLine("".PadLeft(tam, '='));
         }
 
+        
         public static void EscribirTitulo(string titulo)
         {
+              
             var tamaño = titulo.Length + 4;
             DibujarLinea(tamaño) ;
             Console.WriteLine($"| {titulo} |");

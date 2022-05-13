@@ -5,7 +5,7 @@ using CoreEscuela.Entidades;
 
 namespace CoreEscuela
 {
-    
+
     public sealed class EscuelaEngine
     {
         public Escuela Escuela { get; set; }
@@ -44,7 +44,7 @@ namespace CoreEscuela
                                 Asignatura = asignatura,
                                 Nombre = $"{asignatura.Nombre} Evaluacion #{i + 1} ",
                                 Nota = (float)(5 * rnd.NextDouble()),
-                                Alumno = alumno 
+                                Alumno = alumno
                             };
                             alumno.Evaluaciones.Add(ev);
                         }
@@ -53,7 +53,25 @@ namespace CoreEscuela
             }
 
         }
+        //metodo que nos devuelve todos los objetos de la escuela
+        public List<ObjetoEscuelaBase> GetObjetoEscuelaBases()
+        {
+            var listaObj = new List<ObjetoEscuelaBase>();
+            listaObj.Add(Escuela);
+            listaObj.AddRange(Escuela.Cursos);
+            
+            foreach (var curso in Escuela.Cursos)
+            {
+                listaObj.AddRange(curso.Asignaturas);
+                listaObj.AddRange(curso.Alumnos);
 
+                foreach( var alumno in curso.Alumnos)
+                {
+                    listaObj.AddRange(alumno.Evaluaciones);
+                }
+            }
+            return listaObj;
+        }
 
         private void CargarAsignaturas()
         {

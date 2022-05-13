@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "P:\\BOT\\modulo 4\\unidad 2\\1programacSharp\\ProyectoPlatzi\\ElGranRetoSolucion\\Etapa1.csproj": {}
+    "P:\\BOT\\modulo 4\\unidad 2\\1programacSharp\\ProyectoPlatzi\\Etapa5\\Etapa1.csproj": {}
   },
   "projects": {
-    "P:\\BOT\\modulo 4\\unidad 2\\1programacSharp\\ProyectoPlatzi\\ElGranRetoSolucion\\Etapa1.csproj": {
+    "P:\\BOT\\modulo 4\\unidad 2\\1programacSharp\\ProyectoPlatzi\\Etapa5\\Etapa1.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "P:\\BOT\\modulo 4\\unidad 2\\1programacSharp\\ProyectoPlatzi\\ElGranRetoSolucion\\Etapa1.csproj",
+        "projectUniqueName": "P:\\BOT\\modulo 4\\unidad 2\\1programacSharp\\ProyectoPlatzi\\Etapa5\\Etapa1.csproj",
         "projectName": "Etapa1",
-        "projectPath": "P:\\BOT\\modulo 4\\unidad 2\\1programacSharp\\ProyectoPlatzi\\ElGranRetoSolucion\\Etapa1.csproj",
+        "projectPath": "P:\\BOT\\modulo 4\\unidad 2\\1programacSharp\\ProyectoPlatzi\\Etapa5\\Etapa1.csproj",
         "packagesPath": "C:\\Users\\Pixeles-Sanchez\\.nuget\\packages\\",
-        "outputPath": "P:\\BOT\\modulo 4\\unidad 2\\1programacSharp\\ProyectoPlatzi\\ElGranRetoSolucion\\obj\\",
+        "outputPath": "P:\\BOT\\modulo 4\\unidad 2\\1programacSharp\\ProyectoPlatzi\\Etapa5\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Pixeles-Sanchez\\AppData\\Roaming\\NuGet\\NuGet.Config",
