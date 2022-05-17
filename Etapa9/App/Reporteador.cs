@@ -31,6 +31,7 @@ namespace CoreEscuela.App
             }
 
         }
+
         public IEnumerable<string> GetListaAsignaturas()
         {
             return GetListaAsignaturas(out var dummy);
@@ -74,18 +75,18 @@ namespace CoreEscuela.App
             foreach (var asigConEval in dicEvaluaXAsig)
             {
                 var promsAlumn = from eval in asigConEval.Value
-                                 group eval by new
-                                 {
-                                     eval.Alumno.UniqueId,
-                                     eval.Alumno.Nombre
-                                 }
-                            into grupoEvalsAlumno
-                                 select new AlumnoPromedio
-                                 {
-                                     alumnoId = grupoEvalsAlumno.Key.UniqueId,
-                                     alumnoNombre = grupoEvalsAlumno.Key.Nombre,
-                                     promedio = grupoEvalsAlumno.Average(evaluacion => evaluacion.Nota)
-                                 };
+                                group eval by new
+                                {
+                                    eval.Alumno.UniqueId,
+                                    eval.Alumno.Nombre
+                                }
+                                into grupoEvalsAlumno
+                                select new AlumnoPromedio
+                                {
+                                    alumnoId = grupoEvalsAlumno.Key.UniqueId,
+                                    alumnoNombre = grupoEvalsAlumno.Key.Nombre,
+                                    promedio = grupoEvalsAlumno.Average(evaluacion => evaluacion.Nota)
+                                };
 
 
                 rta.Add(asigConEval.Key, promsAlumn);

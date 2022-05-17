@@ -88,7 +88,6 @@ namespace CoreEscuela
                     Printer.EscribirTitulo("FINALLY");
                 }  
             }
-
         }
 
         private static void AccionDelEvento(object sender, EventArgs e)
